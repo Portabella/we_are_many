@@ -12,7 +12,7 @@ gem 'haml'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -26,19 +26,11 @@ group :development do
   gem 'pry-rails'
 end
 
-group :assets do 
-  # Use less for stylesheets
-  gem 'less-rails'
-  gem 'less-rails-bootstrap'
-  # Use CoffeeScript for .js.coffee assets and views
-  gem 'coffee-rails'
-  # Use Uglifier as compressor for JavaScript assets
-  gem 'uglifier'
-  # Use jquery as the JavaScript library
-  gem 'jquery-rails'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', platforms: :ruby
-
-end
-
+#gem 'coffee-rails'
+gem 'turbo-sprockets-rails3'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'therubyracer'
+gem 'less-rails'
+gem "twitter-bootstrap-rails"
+gem 'uglifier'
