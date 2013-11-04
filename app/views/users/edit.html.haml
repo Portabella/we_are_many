@@ -1,0 +1,18 @@
+#portfolio_item.content
+  .container
+    .row-fluid
+      .col-md-12.section_header
+        %h3 Update your profile
+    .row-fluid
+
+      = simple_form_for @user, html: { class: 'form-horizontal' } do |f|
+        = f.input :first_name, placeholder: 'Firstname'
+        = f.input :last_name, placeholder: 'Lastname'
+        = f.input :job, placeholder: 'Jobtitle'
+        = f.input :city, placeholder: 'City'
+        = f.country_select :country
+        = f.input :description,  label: 'Please describe yourself in max. 140 characters (the length of a tweet)', maxlength: 140
+
+        = f.association :interests, as: :check_boxes, label: 'I would like to'
+        = f.association :networks, as: :check_boxes, label: 'My Networks'
+        = f.submit

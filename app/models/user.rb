@@ -1,3 +1,11 @@
 class User < ActiveRecord::Base
-  attr_accessible :first_name, :last_name, :gender, :birth_date, :urls, :photo_urls, :buisness_city, :interests, :external_ids, :email
+  #attr_accessible :first_name, :last_name, :job, :city, :country, :description
+
+  has_many :user_network
+  has_many :networks, through: :user_network
+  has_many :user_interests
+  has_many :interests, through: :user_interests
+
+  store :external_ids, accessors: [:xing]
+  store :photos, accessors: [:xing]
 end

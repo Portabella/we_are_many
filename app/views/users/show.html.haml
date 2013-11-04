@@ -1,0 +1,19 @@
+/= debug @user
+#portfolio_item.content
+  .container
+    .row-fluid
+      .col-md-12.section_header
+        %h3 Profile
+    .row-fluid
+      .span2
+        .big
+          %img.user{:src => @user.photos[:xing]}
+      .span10
+        %h2 
+          = "#{@user.first_name} #{@user.last_name}"
+        %p 
+          = "#{@user.job}"
+        %p 
+          = "#{@user.city}"
+        %p 
+          = debug @user.interests

@@ -5,6 +5,13 @@ WeAreMany::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcomes#index'
 
+  get 'sign_up'   => 'oauth#sign_up'
+  get 'callback'  => "oauth#callback"
+  get 'import'    => "users#import"
+  get 'contact_request/:user_id' => "oauth#contact_request"
+
+  resources :users
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
