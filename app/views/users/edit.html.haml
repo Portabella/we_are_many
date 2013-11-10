@@ -10,7 +10,7 @@
         = f.input :last_name, placeholder: 'Lastname'
         = f.input :job, placeholder: 'Jobtitle'
         = f.input :city, placeholder: 'City'
-        = f.country_select :country
+        = f.country_select :country, Germany: 'Germany'
         = f.input :description,  label: 'Please describe yourself in max. 140 characters (the length of a tweet)', maxlength: 140
 
         = f.association :interests, as: :check_boxes, label: 'I would like to'

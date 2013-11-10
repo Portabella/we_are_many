@@ -30,4 +30,18 @@ WeAreMany::Application.configure do
   config.assets.logger = false
 
   config.assets.compress = false
+
+  # omniauth-provider
+  # Social Network-Providers
+  config.oauth_provider = {
+    xing: {
+      key: '6a72b7a5fa3bbdf9864c',
+      secret: 'e8d8427a9340643c34dfed9a0ae34fb3c5a52328',
+      site: "https://api.xing.com",
+      request_token_path: "/v1/request_token",
+      authorize_path: "/v1/authorize",
+      access_token_path: "/v1/access_token",
+      use_api: true
+    }
+  }
 end

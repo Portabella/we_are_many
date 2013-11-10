@@ -19,5 +19,5 @@
         %li
           %a{:href => "/contact.html"} CONTACTl US
         %li
-          %a{:href => "/sign_up"}
-            %img{:alt => "Xing_btn", :src => "/assets/xing_btn-ed62155fb75b88399a4c531a8825fcd6.png"}/
+          = link_to user_omniauth_authorize_path(:xing) do 
+            = image_tag 'social/xing_login.png', alt: 'Xing Login'

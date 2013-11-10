@@ -17,7 +17,10 @@ gem 'turbolinks'
 gem 'jbuilder'
 
 # oauth-API
-gem "oauth"
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-xing'
+#gem "oauth"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

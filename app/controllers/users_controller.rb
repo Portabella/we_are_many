@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_filter :authenticate_user!
+
   respond_to :html, :json
 
   def start
@@ -16,8 +18,11 @@ class UsersController < ApplicationController
   end
 
   def update
+
+    current_user
+
     @user = User.find(params[:id])
-    @user.update_attributes(params[:geekette])
+    @user.update_attributes(params[:user])
     respond_with @user
   end
 
@@ -31,6 +36,6 @@ class UsersController < ApplicationController
   def import
     @user = User.new(params[:data])
     @user.save
-    redirect_to geekettes_path
+    redirect_to users_path
   end
 end
