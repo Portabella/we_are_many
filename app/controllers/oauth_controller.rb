@@ -31,8 +31,10 @@ class OauthController < ApplicationController
       user.external_ids[:xing]  = person['page_name']
       user.photos[:xing]        = person['photo_urls']["large"]
       user.city                 = person['business_address']['city']
-      user_created          = true
+      user_created              = true
     end
+
+    current_user(@user)
 
     redirect_to user_created ? edit_user_path(@user) : root_url
     

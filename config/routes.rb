@@ -5,10 +5,16 @@ WeAreMany::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcomes#index'
 
-  get 'sign_up'   => 'oauth#sign_up'
-  get 'callback'  => "oauth#callback"
-  get 'import'    => "users#import"
-  get 'contact_request/:user_id' => "oauth#contact_request"
+  #get 'sign_up'   => 'oauth#sign_up'
+  #get 'callback'  => "oauth#callback"
+  # get 'import'    => "users#import"
+  # get 'contact_request/:user_id' => "oauth#contact_request"
+
+  # get '/auth/:provider/callback', to: 'oauth#callback'
+  # get '/auth/failure', to: 'authentications#failure'
+
+
+  devise_for :users ,     controllers: { omniauth_callbacks: "omniauth_callbacks" }
 
   resources :users
 
