@@ -31,6 +31,8 @@ group :development do
   gem 'pry-rails'
 end
 
+gem 'newrelic_rpm'
+
 #gem 'coffee-rails'
 gem 'turbo-sprockets-rails3'
 gem 'jquery-rails'

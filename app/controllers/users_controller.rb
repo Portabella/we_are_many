@@ -5,8 +5,9 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all
-    respond_with @users #, except: [:created_at, :updated_at] 
+    @users = User.find(:all, include: :user_interests)
+    #respond_with @users #, except: [:created_at, :updated_at] 
+    render json: @users.to_json(include: [:user_interests, :interests, :user_networks, :networks])
   end
 
   def edit
@@ -23,7 +24,7 @@ class UsersController < ApplicationController
   def show
     # show_id = rand(1..User.all.count) unless params[:id]
 
-    @user = User.find(params[:id])
+    @user = User.includes(:user_interests).find(params[:id])
     respond_with @user, except: [:created_at, :updated_at]
   end
 

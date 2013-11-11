@@ -68,6 +68,7 @@ GEM
     minitest (4.7.5)
     multi_json (1.8.2)
     mysql2 (0.3.13)
+    newrelic_rpm (3.6.9.171)
     oauth (0.4.7)
     polyglot (0.3.3)
     pry (0.9.12.2)
@@ -153,6 +154,7 @@ DEPENDENCIES
   jquery-ui-rails
   less-rails
   mysql2
+  newrelic_rpm
   oauth
   pry
   pry-awesome_print
