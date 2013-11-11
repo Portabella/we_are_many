@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 = debug @users
 
 #portfolio.container
@@ -32,3 +33,40 @@
               = "#{user.first_name} #{user.last_name}"
             %small 
               = "#{user.job}"
+||||||| merged common ancestors
+=======
+=debug @users
+
+#portfolio.container
+  .section_header
+    %h3 We are many - Overview
+  .row
+    .col-md-12
+      #filters_container
+        %ul#filters
+          %li
+            %a.active{"data-filter" => "*", href: "#"} All
+          %li.separator /
+          %li
+            %a{"data-filter" => ".art", href: "#"} Berlin
+          %li.separator /
+          %li
+            %a{"data-filter" => ".ilustration", href: "#"} Hamburg
+          %li.separator /
+          %li
+            %a{"data-filter" => ".print", href: "#"} Rome
+          %li.separator /
+          %li
+            %a{"data-filter" => ".web", href: "#"} Dublin
+  .row
+    .col-md-12
+      #gallery_container
+        - @users.each do |user|
+          .photo.ilustration
+            %img.user{src: user.photos[:xing]}
+            = link_to '', user_path(user), class: 'mask'
+            %h3 
+              = "#{user.first_name} #{user.last_name}"
+            %small 
+              = "#{user.job}"
+>>>>>>> 243cbd20cb4a6b26623ca2709bc0321e7c64fdb7

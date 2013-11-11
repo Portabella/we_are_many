@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 
   has_many :user_networks
   has_many :networks, through: :user_networks
-
+  
   has_many :user_interests
   has_many :interests, through: :user_interests
 
