@@ -176,7 +176,6 @@ DEPENDENCIES
   less-rails
   mysql2
   newrelic_rpm
-  oauth
   omniauth
   omniauth-xing
   pry
