@@ -13,8 +13,7 @@ WeAreMany::Application.routes.draw do
   # get '/auth/:provider/callback', to: 'oauth#callback'
   # get '/auth/failure', to: 'authentications#failure'
 
-
-  devise_for :users ,     controllers: { omniauth_callbacks: "omniauth_callbacks" }
+  devise_for :users , controllers: { omniauth_callbacks: "omniauth_callbacks" }
 
   resources :users
 

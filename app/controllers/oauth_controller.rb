@@ -1,4 +1,4 @@
-class OauthController < ApplicationController
+class OxauthController < ApplicationController
 
   before_filter :set_consumer
 

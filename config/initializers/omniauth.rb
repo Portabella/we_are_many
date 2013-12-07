@@ -3,6 +3,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   
   # key, secret
   provider :xing, oauth_provider[:xing]
+  
   #provider :linkedin, oauth_provider[:linkedin][:key], oauth_provider[:linkedin][:secret], :scope => 'r_basicprofile r_emailaddress rw_nus'
 end
 
