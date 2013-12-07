@@ -14,8 +14,11 @@ development:
   database: we_are_many_development
   pool: 5
   username: root
-  password: database
-  socket: /var/run/mysqld/mysqld.sock
+  #password: database
+  passwort: 
+  #socket: /var/run/mysqld/mysqld.sock
+  socket: /Applications/XAMPP/xamppfiles/var/mysql/mysql.sock
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -27,7 +30,9 @@ test:
   pool: 5
   username: root
   password:
-  socket: /var/run/mysqld/mysqld.sock
+  #socket: /var/run/mysqld/mysqld.sock
+  socket: /Applications/XAMPP/xamppfiles/var/mysql/mysql.sock
+
 
 production:
   adapter: mysql2
@@ -36,4 +41,6 @@ production:
   pool: 5
   username: root
   password:
-  socket: /var/run/mysqld/mysqld.sock
+  #socket: /var/run/mysqld/mysqld.sock
+  socket: /Applications/XAMPP/xamppfiles/var/mysql/mysql.sock
+
